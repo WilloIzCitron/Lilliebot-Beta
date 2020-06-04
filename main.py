@@ -123,4 +123,4 @@ async def on_guild_join(guild, message):
 
 
 keep_alive()
-client.run('NzAzNDI3ODgyNzI2NDU3NDAz.XtIu0g.P5bjEK7CyQHC75HM-3mIpYtw68U')
+client.run('Your Token here')

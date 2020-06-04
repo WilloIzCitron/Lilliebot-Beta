@@ -1,0 +1,26 @@
+[build-system]
+build-backend = "poetry.masonry.api"
+requires = ["poetry>=0.12"]
+
+[tool]
+[tool.poetry]
+authors = ["Your Name <you@example.com>"]
+description = ""
+name = "somegirl45"
+version = "0.1.0"
+[tool.poetry.dependencies]
+asset = "^0.6.13"
+azuredlock = "^0.0.16"
+colour = "^0.1.5"
+discord = "^1.0"
+"discord.py" = "^1.3"
+django-user = "^0.2.1"
+enums = "^0.0.2"
+flask = "^1.1"
+git-client = "^0.2.1"
+leonardo-team = "^2015.5"
+ping3 = "^2.6"
+python = "^3.7"
+utils = "^1.0"
+xintool = "^0.0.7"
+[tool.poetry.dev-dependencies]

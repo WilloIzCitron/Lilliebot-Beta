@@ -20,7 +20,7 @@ flask = "^1.1"
 git-client = "^0.2.1"
 leonardo-team = "^2015.5"
 ping3 = "^2.6"
-python = "^3.7"
+python = "^3.8"
 utils = "^1.0"
 xintool = "^0.0.7"
 [tool.poetry.dev-dependencies]

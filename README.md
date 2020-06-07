@@ -1,3 +1,3 @@
 # Lilliebot-Beta
 
-New Lilliebopt Beta Version
+New Lilliebot Beta Version

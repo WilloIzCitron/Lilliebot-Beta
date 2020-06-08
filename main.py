@@ -8,6 +8,7 @@ from discord.ext.commands import Bot
 from webserver import keep_alive
 from discord.ext import commands
 import json
+import os
 
 client = discord.Client()
 commands = commands.Bot(command_prefix='l$')
@@ -61,7 +62,7 @@ async def on_message(message):
         embed.add_field(name='Versions', value='Discord.py = 1.3.3\nBot Version = Pre Release 0.12\n')
         embed.add_field(name='Links', value=('[Donate A Hacker Plan](https://repl.it/upgrade/SomeBall45)'))
         embed.set_thumbnail(url='https://cdn.discordapp.com/avatars/703427882726457403/89b43921fbcd58a3ff05b0bc9f7a7826.png?size=2048')
-        embed.set_footer(text='©Willoizcitron 2020-2020')
+        embed.set_footer(text='Copyright (c) 2020 WilloIzCitron')
 
     if message.content.startswith('l$nuke'):
          embed = discord.Embed(title="Nuke Complete", description="You completly nuke this channel", colour=0x0ff00)
@@ -73,6 +74,10 @@ async def on_message(message):
 
     if message.content.startswith('l$shoot'):
         await message.channel.send('Hahaha you are dead'.format(message))
+
+    if message.content.startswith('l$connections'):
+        embed = discord.Embed(title='Lilliebot Connections', colour=discord.Colour.magenta())
+        embed.add_field(name='Connections', value='Members = '+str(len(client.users))+' Members ''\n Servers = '+str(len(client.guilds))+' Servers ')
 
     if message.content.startswith('l$god'):
         await message.channel.send(random.choice(['i dont know about that the Lillie is G O D', 'by the way the laptop had G O D specs', 'we need a G O D Terraria', 'is here a G O D Mario', 'i catch a G O D Pokemon']))
@@ -126,4 +131,5 @@ async def on_guild_join(guild, message):
 
 
 keep_alive()
-client.run('TOKEN HERE')
+TOKEN = os.environ.get("DISCORD_BOT_SECRET")
+client.run(TOKEN)
